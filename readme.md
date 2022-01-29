@@ -1,1 +1,1 @@
-#cypress tutorial
+# cypress-tutorial
