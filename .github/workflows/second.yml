@@ -31,7 +31,6 @@ jobs:
           record: true
           parallel: true
           group: "UI - Chrome - Mobile"
-          spec: cypress/tests/ui/*
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
