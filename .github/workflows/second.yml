@@ -12,13 +12,17 @@ jobs:
       fail-fast: false
       matrix:
         # run copies of the current job in parallel
-        containers: [1, 2, 3, 4, 5]
+        # containers: [1, 2, 3, 4, 5]
+        node-version: ['12', '14']
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: "UI Tests - Chrome - Mobile"
         uses: cypress-io/github-action@v2
         with:
           config: "viewportWidth=375,viewportHeight=667"
-          start: yarn start:ci
+          node-version: ${{matrix.node-version}}
+          start: npm start:ci
           wait-on: "http://localhost:3000"
           wait-on-timeout: 120
           browser: chrome
