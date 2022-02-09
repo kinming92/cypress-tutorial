@@ -14,7 +14,7 @@ jobs:
           # let's see if the Test Runner handles url in the config
           # https://github.com/cypress-io/cypress/issues/5466
           config: baseUrl=http://localhost:8888
-          record: true
+          record: false
         env:
           CYPRESS_RECORD_KEY: ${{secrets.CYPRESS_RECORD_KEY}}
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
