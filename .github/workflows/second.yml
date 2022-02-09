@@ -2,7 +2,6 @@ name: ui-chrome-mobile-tests
 on: [push]
 jobs:
   cypress-run:
-    timeout-minutes: 15
     runs-on: ubuntu-latest
     container: cypress/browsers:node14.17.0-chrome88-ff89
     needs: install
