@@ -25,7 +25,8 @@ jobs:
           config: "viewportWidth=375,viewportHeight=667"
           node-version: ${{matrix.node-version}}
           start: npm run start:ci
-          wait-on: "http://localhost:3000"
+          wait-on: "http://localhost:8888"
+          wait-on-timeout: 120
           browser: chrome
           record: true
           parallel: true
